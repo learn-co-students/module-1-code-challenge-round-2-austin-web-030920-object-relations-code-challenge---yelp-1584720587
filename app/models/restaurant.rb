@@ -5,4 +5,12 @@ class Restaurant
     @name = name
   end
 
+  def reviews
+    Review.all.map{|view| view.rating == self}
+  end
+
+  def customers
+    self.reviews.map{|x| x.customers}
+  end
+
 end
