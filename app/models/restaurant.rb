@@ -16,7 +16,9 @@ def customers
 end
 
 def average_star_rating
-   Review.all.map {|review| review.rating}.sum/review.length
-end
+   x = reviews
+   avg = x.map {|review| review.rating}.sum/x.length
+   avg
+  end
 
 end

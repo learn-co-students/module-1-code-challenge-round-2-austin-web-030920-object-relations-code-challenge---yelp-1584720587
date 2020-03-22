@@ -10,6 +10,7 @@ end
 cust1 = Customer.new("James" , "Dancer")
 cust2 = Customer.new("Antonio", "Coder")
 cust3 = Customer.new("Edwin" , "Tester")
+cust4 = Customer.new("Antonio" , "DiMaggio")
 
 rest1 = Restaurant.new("Tiki India")
 rest2 = Restaurant.new("Americana Chocoshake")
@@ -19,10 +20,9 @@ rev1 = Review.new(cust1, rest1, 7)
 rev2 = Review.new(cust2, rest2, 8)
 rev3 = Review.new(cust3, rest3, 10)
 rev4 = Review.new(cust2, rest1, 3)
+rev5 = Review.new(cust4, rest1, 2)
 
-
-
-
+rest1.average_star_rating
 
 
 binding.pry
