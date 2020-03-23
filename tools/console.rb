@@ -12,6 +12,7 @@ joe = Customer.new("Joe", "Schmoe")
 jill = Customer.new("Jill", "Rice")
 anne = Customer.new("Anne", "Flowers")
 beth = Customer.new("Beth", "Towers")
+jill2 = Customer.new("Jill", "Firestone")
 #restaurants
 fresas = Restaurant.new("Fresa's Chicken")
 thai = Restaurant.new("Thai Fresh")
@@ -22,6 +23,8 @@ good = Review.new(joe, fresas, 5)
 ok = Review.new(jill, fresas, 4)
 bad = Review.new(anne, thai, 10)
 wonderful = Review.new(beth, laundi, 8)
+bleh = Review.new(joe, fresas, 2)
+wowow = Review.new(joe, thai, 9)
 
 # tools/console.rb
 binding.pry

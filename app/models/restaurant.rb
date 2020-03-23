@@ -27,10 +27,8 @@ class Restaurant
   # returns the average star rating for a restaurant based on its reviews
   # Reminder: you can calculate the average by adding up all the ratings and dividing by the number of ratings
     def average_star_rating
-      
+      sum = self.reviews.collect{|review| review.rating}.sum.to_f
+      sum / self.reviews.length
     end
 
 end
-
-
-
