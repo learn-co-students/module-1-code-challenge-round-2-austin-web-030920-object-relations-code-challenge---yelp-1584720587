@@ -16,8 +16,10 @@ class Customer
     @@all
   end
 
-  def restaurants
-    Restaurant.all.map{|x| x.}
+  def restaurant
+    Restaurant.all.collect do |restaurant|
+      review.restaurant
+    end
   end
 
   def add_review(restaurant, rating)
