@@ -7,7 +7,7 @@ class Customer
     @family_name  = family_name
     @@all << self
   end
-  
+
   def full_name
     "#{given_name} #{family_name}"
   end
@@ -17,7 +17,7 @@ class Customer
   end
 
   def restaurants
-    #Restaurant.all.map
+    Restaurant.all.map{|x| x.}
   end
 
   def add_review(restaurant, rating)
@@ -25,7 +25,9 @@ class Customer
   end
 
   def num_reviews
-
+    Review.all.collect do |restaurant_review|
+      restaurant_review.restaurant == self
+    end
   end
 
   def self.find_by_name(name)
